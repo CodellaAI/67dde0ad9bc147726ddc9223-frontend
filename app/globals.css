@@ -1,0 +1,36 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 218, 224, 230;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-reddit-orange hover:bg-reddit-red text-white font-bold py-2 px-4 rounded transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-100 text-reddit-blue border border-reddit-blue font-bold py-2 px-4 rounded transition-colors;
+  }
+  
+  .btn-outline {
+    @apply bg-transparent hover:bg-gray-100 text-gray-700 font-semibold py-2 px-4 border border-gray-300 rounded transition-colors;
+  }
+  
+  .card {
+    @apply bg-white rounded-md shadow-sm hover:shadow-md transition-shadow;
+  }
+  
+  .input {
+    @apply border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-reddit-blue;
+  }
+}
